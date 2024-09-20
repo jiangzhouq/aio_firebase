@@ -5,8 +5,10 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'firebase_options.dart';
 import 'package:flutter/foundation.dart';
+import 'package:flutter_web_plugins/url_strategy.dart';
 
 void main() async {
+  setUrlStrategy(PathUrlStrategy());
   Get.lazyPut(() => PasswordController());
   Get.lazyPut(() => HomeController());
   await Firebase.initializeApp(
@@ -22,7 +24,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      initialRoute: kIsWeb ? '/aio_firebase/' : null, // 添加这一行
+      initialRoute: '/', // 添加这一行
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,

@@ -5,7 +5,7 @@ import 'package:pinput/pinput.dart';
 
 class PasswordController extends GetxController {
   void checkPassword(String pin) {
-    if (pin == '123456') {
+    if (pin == '816251') {
       Get.to(() => HomePage());
     } else {
       Get.dialog(AlertDialog(

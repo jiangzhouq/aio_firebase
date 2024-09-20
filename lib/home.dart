@@ -155,7 +155,7 @@ class HomePage extends GetView<HomeController> {
                                           child: Center(
                                             child: Padding(
                                               padding: EdgeInsets.all(8.0),
-                                              child: Text(e.sn ?? '',
+                                              child: SelectableText(e.sn ?? '',
                                                   style:
                                                       TextStyle(fontSize: 16)),
                                             ),
@@ -167,7 +167,7 @@ class HomePage extends GetView<HomeController> {
                                           child: Center(
                                             child: Padding(
                                               padding: EdgeInsets.all(8.0),
-                                              child: Text(e.pid ?? '',
+                                              child: SelectableText(e.pid ?? '',
                                                   style:
                                                       TextStyle(fontSize: 16)),
                                             ),
